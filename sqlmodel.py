@@ -33,13 +33,9 @@ def close() -> None:
     c.close()
     conn.close()
 
-temp =     {
-        'name'     : '123',
-        'surname'  : '123',
-        "sentence" : 'insanlardan haz123123 etmiyorum'
-    }
+"""
 create_table()
 data_entry(temp)
 df = read_from_db()
-print(df)
 close()
+"""
