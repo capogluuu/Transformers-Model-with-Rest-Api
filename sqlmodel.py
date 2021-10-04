@@ -12,8 +12,7 @@ def create_table() -> None:
     c.execute(sql_query)
 
 def data_entry(user_dict : typing.Dict[str, str])-> None:
-    print(user_dict)
-    c.execute("INSERT INTO flashdata VALUES('{0}','{1}','{2}')".format(user_dict["name"], user_dict["surname"], user_dict["sentence"]))
+    c.execute("INSERT or IGNORE INTO flashdata VALUES('{0}','{1}','{2}')".format(user_dict["name"], user_dict["surname"], user_dict["sentence"]))
     conn.commit()
 
 def read_from_db()-> typing.List :
